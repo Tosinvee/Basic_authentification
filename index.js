@@ -3,7 +3,6 @@ const fs = require('fs');
  require('url');
 const basicAuth = require('./auth');
 
-const PORT = 3000;
 const DATA_FILE = './database.json';
 
 
@@ -51,6 +50,6 @@ const server = http.createServer((req, res) => {
     basicAuth(req, res, () => requestHandler(req, res));
 });
 
-server.listen(PORT, () => {
-    console.log(`Server is listening on ${PORT}`);
+server.listen(8080, () => {
+    console.log(`Server is listening on 8080`);
 });
