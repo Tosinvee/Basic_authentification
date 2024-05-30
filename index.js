@@ -6,7 +6,7 @@ const basicAuth = require('./auth');
 const PORT = 3000;
 const DATA_FILE = './database.json';
 
-// Read data from the JSON file
+
 function readData() {
     try {
         const data = fs.readFileSync(DATA_FILE, 'utf8');
@@ -16,12 +16,12 @@ function readData() {
     }
 }
 
-// Write data to the JSON file
+
 function writeData(data) {
     fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), 'utf8');
 }
 
-// Handle requests
+
 const requestHandler = (req, res) => {
     if (req.method === 'POST' && req.url === '/memories') {
         let body = '';
