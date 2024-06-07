@@ -1,7 +1,7 @@
 const http = require('http');
 const fs = require('fs');
  require('url');
-const basicAuth = require('./auth');
+const basicAuth = require('./Assesement1/auth');
 
 const DATA_FILE = './database.json';
 
